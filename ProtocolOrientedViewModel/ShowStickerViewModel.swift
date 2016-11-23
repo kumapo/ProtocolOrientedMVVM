@@ -12,7 +12,13 @@ struct ShowStickerViewModel: ViewModelType {
     typealias ModelType = Sticker
     
     var model: ModelType
-    init(model: ModelType) {
-        self.model = model
+}
+
+extension ShowStickerViewModel {
+    init<VM: ViewModelType>(viewModel: VM) where VM.ModelType == ModelType {
+        self.model = viewModel.model
     }
 }
+
+extension ShowStickerViewModel: WebImagePresentable {}
+extension ShowStickerViewModel: TextPresentable {}

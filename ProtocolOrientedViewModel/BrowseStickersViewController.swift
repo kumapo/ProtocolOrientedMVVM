@@ -34,6 +34,23 @@ class BrowseStickersViewController: UITableViewController {
         }
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
+        performSegue(withIdentifier: "ShowSticker", sender: viewModel.cellViewModels[indexPath.row])
+    }
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if let viewController = segue.destination as? ShowStickerViewController,
+           let cellViewModel = sender as? StickerCellViewModel {
+
+            viewController.viewModel = ShowStickerViewModel(viewModel: cellViewModel)
+        }
+     }
 
     /*
     // Override to support conditional editing of the table view.
@@ -67,16 +84,6 @@ class BrowseStickersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 

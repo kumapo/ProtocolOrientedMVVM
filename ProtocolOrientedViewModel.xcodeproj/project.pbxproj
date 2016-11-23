@@ -23,6 +23,7 @@
 		54FA30561DE5862B00D03D59 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FA30551DE5862B00D03D59 /* WebImage.framework */; };
 		54FA30591DE5A77300D03D59 /* imgBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FA30581DE5A77300D03D59 /* imgBlank.png */; };
 		54FA305B1DE5AA8A00D03D59 /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA305A1DE5AA8A00D03D59 /* TextPresentable.swift */; };
+		54FA305D1DE5AFD800D03D59 /* ShowStickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA305C1DE5AFD800D03D59 /* ShowStickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		54FA30551DE5862B00D03D59 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		54FA30581DE5A77300D03D59 /* imgBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgBlank.png; sourceTree = "<group>"; };
 		54FA305A1DE5AA8A00D03D59 /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
+		54FA305C1DE5AFD800D03D59 /* ShowStickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				54FA302E1DE56E4D00D03D59 /* Info.plist */,
 				54FA302B1DE56E4D00D03D59 /* LaunchScreen.storyboard */,
 				54FA30261DE56E4D00D03D59 /* Main.storyboard */,
+				54FA305C1DE5AFD800D03D59 /* ShowStickerViewController.swift */,
 				54FA30501DE5806500D03D59 /* ShowStickerViewModel.swift */,
 				54FA303C1DE5797600D03D59 /* Sticker.swift */,
 				54FA304C1DE57DDB00D03D59 /* StickerCell.swift */,
@@ -204,6 +207,7 @@
 				54FA304B1DE57CF200D03D59 /* BrowseStickersViewModel.swift in Sources */,
 				54FA30511DE5806500D03D59 /* ShowStickerViewModel.swift in Sources */,
 				54FA30491DE57C7400D03D59 /* BrowseStickersViewController.swift in Sources */,
+				54FA305D1DE5AFD800D03D59 /* ShowStickerViewController.swift in Sources */,
 				54FA304D1DE57DDB00D03D59 /* StickerCell.swift in Sources */,
 				54FA304F1DE57DED00D03D59 /* StickerCellViewModel.swift in Sources */,
 				54FA30531DE581FF00D03D59 /* ViewModelType.swift in Sources */,

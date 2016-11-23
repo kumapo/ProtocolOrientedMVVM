@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CEa-cN-aAh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dAk-x8-sw3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Browse Stickers View Controller-->
-        <scene sceneID="uZy-lJ-Bpj">
+        <!--ステッカー一覧-->
+        <scene sceneID="l2j-r2-FcF">
             <objects>
-                <tableViewController id="CEa-cN-aAh" customClass="BrowseStickersViewController" customModule="ProtocolOrientedViewModel" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kfs-Rf-Ld2">
+                <tableViewController id="cva-wd-83P" customClass="BrowseStickersViewController" customModule="ProtocolOrientedViewModel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="92X-zG-tYn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StickerCell" textLabel="Z2J-Gk-veC" style="IBUITableViewCellStyleDefault" id="eVj-AM-FVD" customClass="StickerCell" customModule="ProtocolOrientedViewModel" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StickerCell" textLabel="S8R-3a-ehY" style="IBUITableViewCellStyleDefault" id="kza-9D-One" customClass="StickerCell" customModule="ProtocolOrientedViewModel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVj-AM-FVD" id="PTm-EJ-CK6">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kza-9D-One" id="P6L-iA-RvG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z2J-Gk-veC">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8R-3a-ehY">
                                             <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,14 +38,79 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="CEa-cN-aAh" id="nyP-sD-kd0"/>
-                            <outlet property="delegate" destination="CEa-cN-aAh" id="Tcc-dP-N9N"/>
+                            <outlet property="dataSource" destination="cva-wd-83P" id="u43-JH-ZEn"/>
+                            <outlet property="delegate" destination="cva-wd-83P" id="DHr-aJ-Urj"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="ステッカー一覧" id="3J2-Ub-huO"/>
+                    <connections>
+                        <segue destination="69j-TO-MX9" kind="show" identifier="ShowSticker" id="NTa-OF-Smj"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GZl-7j-gMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3f-NY-hfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="256"/>
+            <point key="canvasLocation" x="-260" y="236"/>
+        </scene>
+        <!--ステッカー詳細-->
+        <scene sceneID="7Mv-5R-FL0">
+            <objects>
+                <viewController id="69j-TO-MX9" customClass="ShowStickerViewController" customModule="ProtocolOrientedViewModel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wLl-sU-5We"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJ9-P2-4MU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JLO-Rq-Rlk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H3e-6m-PUx">
+                                <rect key="frame" x="14" y="78" width="347" height="347"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H3e-6m-PUx" secondAttribute="height" multiplier="1:1" id="ecF-9k-9Yl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-ur-fYS">
+                                <rect key="frame" x="14" y="449" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ta3-ur-fYS" firstAttribute="leading" secondItem="H3e-6m-PUx" secondAttribute="leading" id="621-hx-ioT"/>
+                            <constraint firstAttribute="trailing" secondItem="H3e-6m-PUx" secondAttribute="trailing" constant="14" id="98J-o5-awR"/>
+                            <constraint firstItem="ta3-ur-fYS" firstAttribute="top" secondItem="H3e-6m-PUx" secondAttribute="bottom" constant="24" id="LLh-eH-iqN"/>
+                            <constraint firstItem="H3e-6m-PUx" firstAttribute="leading" secondItem="JLO-Rq-Rlk" secondAttribute="leading" constant="14" id="T8E-Oh-x40"/>
+                            <constraint firstItem="H3e-6m-PUx" firstAttribute="centerX" secondItem="JLO-Rq-Rlk" secondAttribute="centerX" id="hLm-yK-BXZ"/>
+                            <constraint firstItem="H3e-6m-PUx" firstAttribute="top" secondItem="wLl-sU-5We" secondAttribute="bottom" constant="14" id="zHM-K6-RJK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ステッカー詳細" id="ega-AV-z4v"/>
+                    <connections>
+                        <outlet property="imageView" destination="H3e-6m-PUx" id="xBD-ID-cUA"/>
+                        <outlet property="textLabel" destination="ta3-ur-fYS" id="nb2-pV-cPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHd-dF-dhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="235"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BAt-Zy-ccv">
+            <objects>
+                <navigationController id="dAk-x8-sw3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xjv-Gt-0g3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cva-wd-83P" kind="relationship" relationship="rootViewController" id="yrl-31-mHO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPP-WR-U2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074" y="235"/>
         </scene>
     </scenes>
 </document>
