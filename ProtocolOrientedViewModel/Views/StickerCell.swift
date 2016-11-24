@@ -10,23 +10,19 @@ import UIKit
 import WebImage
 
 class StickerCell: UITableViewCell {
-    var viewModel: StickerCellViewModel! {
+    var viewModel: StickerCellViewModel? {
         didSet {
-            guard let imageView = imageView else { return }
-            imageView.sd_setImage(with: viewModel.imageURL, placeholderImage: viewModel.placeholderImage)
+            guard let viewModel = viewModel else { return }
             
-            // do another stuff
-            guard  let textLabel = textLabel else { return }
-            textLabel.text = viewModel.text
+            fillImageView(with: viewModel)
+            fillLabel(with: viewModel)
         }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        if let imageView = imageView, imageView.sd_imageURL() != nil {
-            imageView.sd_cancelCurrentImageLoad()
-        }
+        reuseImageView()
     }
     
     override func awakeFromNib() {
@@ -40,3 +36,9 @@ class StickerCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
+
+extension StickerCell: ImageViewContainer {
+    typealias ImageContent = StickerCellViewModel
+}
+
+extension StickerCell: LabelContainer {}

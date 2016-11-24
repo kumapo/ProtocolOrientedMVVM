@@ -10,8 +10,8 @@ import UIKit
 import WebImage
 
 class ShowStickerViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var textLabel: UILabel?
     
     var viewModel: ShowStickerViewModel!
 
@@ -24,18 +24,16 @@ class ShowStickerViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let imageURL = viewModel.imageURL {
-            imageView.sd_setImage(with: imageURL,
-                                  placeholderImage: viewModel.placeholderImage)
-        }
-        textLabel.text = viewModel.text
+        fillImageView(with: viewModel)
+        fillLabel(with: viewModel)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        if let imageView = imageView, imageView.sd_imageURL() != nil {
-            imageView.sd_cancelCurrentImageLoad()
-        }
+        reuseImageView()
     }
 }
+
+extension ShowStickerViewController: ImageViewContainer {}
+extension ShowStickerViewController: LabelContainer {}
