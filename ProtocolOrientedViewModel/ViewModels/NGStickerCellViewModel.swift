@@ -1,20 +1,18 @@
 //
-//  WebImagePresentable.swift
+//  NGStickerCellViewModel.swift
 //  ProtocolOrientedViewModel
 //
-//  Created by kumapo on 2016/11/23.
+//  Created by kumapo on 2016/11/24.
 //  Copyright © 2016年 kumapo. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol WebImagePresentable {
-    var imageURL: URL? { get }
-    var placeholderImage: UIImage { get }
-}
-
-extension ViewModelType where Self: WebImagePresentable, ModelType == Sticker {
+struct NGStickerCellViewModel: ViewModelType {
+    typealias ModelType = Sticker
+    var model: ModelType
+    
     var imageURL: URL? {
         if let url = URL(string: model.imageURLString) { return url }
         return nil

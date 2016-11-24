@@ -20,5 +20,5 @@ extension ShowStickerViewModel {
     }
 }
 
-extension ShowStickerViewModel: WebImagePresentable {}
+extension ShowStickerViewModel: ImageURLPresentable {}
 extension ShowStickerViewModel: TextPresentable {}

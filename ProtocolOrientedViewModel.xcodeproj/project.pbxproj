@@ -12,7 +12,7 @@
 		5499242F1DE708C800991715 /* StickerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924291DE708C800991715 /* StickerCellViewModel.swift */; };
 		549924301DE708C800991715 /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499242A1DE708C800991715 /* TextPresentable.swift */; };
 		549924311DE708C800991715 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499242B1DE708C800991715 /* ViewModelType.swift */; };
-		549924321DE708C800991715 /* WebImagePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499242C1DE708C800991715 /* WebImagePresentable.swift */; };
+		549924321DE708C800991715 /* ImageURLPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499242C1DE708C800991715 /* ImageURLPresentable.swift */; };
 		549924371DE708CE00991715 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924351DE708CE00991715 /* Sticker.swift */; };
 		549924491DE708FE00991715 /* BrowseStickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924441DE708FE00991715 /* BrowseStickersViewController.swift */; };
 		5499244A1DE708FE00991715 /* ImageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924451DE708FE00991715 /* ImageViewContainer.swift */; };
@@ -21,6 +21,10 @@
 		5499244D1DE708FE00991715 /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924481DE708FE00991715 /* StickerCell.swift */; };
 		549924521DE7094D00991715 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5499244E1DE7094D00991715 /* LaunchScreen.storyboard */; };
 		549924531DE7094D00991715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 549924501DE7094D00991715 /* Main.storyboard */; };
+		549924551DE7111E00991715 /* NGStickerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924541DE7111E00991715 /* NGStickerCellViewModel.swift */; };
+		549924571DE7118A00991715 /* NGShowStickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924561DE7118A00991715 /* NGShowStickerViewModel.swift */; };
+		549924591DE716B600991715 /* NGStickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549924581DE716B600991715 /* NGStickerCell.swift */; };
+		5499245B1DE7176200991715 /* NGShowStickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499245A1DE7176200991715 /* NGShowStickerViewController.swift */; };
 		54FA30231DE56E4D00D03D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FA30221DE56E4D00D03D59 /* AppDelegate.swift */; };
 		54FA302A1DE56E4D00D03D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FA30291DE56E4D00D03D59 /* Assets.xcassets */; };
 		54FA30561DE5862B00D03D59 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FA30551DE5862B00D03D59 /* WebImage.framework */; };
@@ -33,7 +37,7 @@
 		549924291DE708C800991715 /* StickerCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCellViewModel.swift; sourceTree = "<group>"; };
 		5499242A1DE708C800991715 /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
 		5499242B1DE708C800991715 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
-		5499242C1DE708C800991715 /* WebImagePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImagePresentable.swift; sourceTree = "<group>"; };
+		5499242C1DE708C800991715 /* ImageURLPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageURLPresentable.swift; sourceTree = "<group>"; };
 		549924351DE708CE00991715 /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
 		549924441DE708FE00991715 /* BrowseStickersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseStickersViewController.swift; sourceTree = "<group>"; };
 		549924451DE708FE00991715 /* ImageViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewContainer.swift; sourceTree = "<group>"; };
@@ -42,6 +46,10 @@
 		549924481DE708FE00991715 /* StickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
 		5499244F1DE7094D00991715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		549924511DE7094D00991715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		549924541DE7111E00991715 /* NGStickerCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGStickerCellViewModel.swift; sourceTree = "<group>"; };
+		549924561DE7118A00991715 /* NGShowStickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGShowStickerViewModel.swift; sourceTree = "<group>"; };
+		549924581DE716B600991715 /* NGStickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGStickerCell.swift; sourceTree = "<group>"; };
+		5499245A1DE7176200991715 /* NGShowStickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NGShowStickerViewController.swift; sourceTree = "<group>"; };
 		54FA301F1DE56E4D00D03D59 /* ProtocolOrientedViewModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolOrientedViewModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FA30221DE56E4D00D03D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FA30291DE56E4D00D03D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,10 +75,12 @@
 			children = (
 				549924271DE708C800991715 /* BrowseStickersViewModel.swift */,
 				549924281DE708C800991715 /* ShowStickerViewModel.swift */,
+				549924561DE7118A00991715 /* NGShowStickerViewModel.swift */,
 				549924291DE708C800991715 /* StickerCellViewModel.swift */,
+				549924541DE7111E00991715 /* NGStickerCellViewModel.swift */,
 				5499242A1DE708C800991715 /* TextPresentable.swift */,
 				5499242B1DE708C800991715 /* ViewModelType.swift */,
-				5499242C1DE708C800991715 /* WebImagePresentable.swift */,
+				5499242C1DE708C800991715 /* ImageURLPresentable.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -92,7 +102,9 @@
 				5499244E1DE7094D00991715 /* LaunchScreen.storyboard */,
 				549924501DE7094D00991715 /* Main.storyboard */,
 				549924471DE708FE00991715 /* ShowStickerViewController.swift */,
+				5499245A1DE7176200991715 /* NGShowStickerViewController.swift */,
 				549924481DE708FE00991715 /* StickerCell.swift */,
+				549924581DE716B600991715 /* NGStickerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,11 +240,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5499242D1DE708C800991715 /* BrowseStickersViewModel.swift in Sources */,
+				549924551DE7111E00991715 /* NGStickerCellViewModel.swift in Sources */,
 				549924301DE708C800991715 /* TextPresentable.swift in Sources */,
-				549924321DE708C800991715 /* WebImagePresentable.swift in Sources */,
+				549924571DE7118A00991715 /* NGShowStickerViewModel.swift in Sources */,
+				549924321DE708C800991715 /* ImageURLPresentable.swift in Sources */,
+				5499245B1DE7176200991715 /* NGShowStickerViewController.swift in Sources */,
 				549924311DE708C800991715 /* ViewModelType.swift in Sources */,
 				5499244A1DE708FE00991715 /* ImageViewContainer.swift in Sources */,
 				549924491DE708FE00991715 /* BrowseStickersViewController.swift in Sources */,
+				549924591DE716B600991715 /* NGStickerCell.swift in Sources */,
 				5499244D1DE708FE00991715 /* StickerCell.swift in Sources */,
 				549924371DE708CE00991715 /* Sticker.swift in Sources */,
 				5499244C1DE708FE00991715 /* ShowStickerViewController.swift in Sources */,
