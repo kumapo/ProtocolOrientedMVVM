@@ -11,8 +11,7 @@ import UIKit
 
 extension ViewModelType where Self: WebImagePresentable, ModelType == Sticker {
     var imageURL: URL? {
-        if let url = URL(string: model.imageURLString) { return url }
-        return nil
+        return URL(string: model.imageURLString)
     }
     var placeholderImage: UIImage {
         return UIImage(named: "imgBlank")!
