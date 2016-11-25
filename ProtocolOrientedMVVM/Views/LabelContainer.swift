@@ -1,6 +1,6 @@
 //
 //  LabelContainer.swift
-//  ProtocolOrientedViewModel
+//  ProtocolOrientedMVVM
 //
 //  Created by kumapo on 2016/11/24.
 //  Copyright © 2016年 kumapo. All rights reserved.

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ProtocolOrientedViewModel.xcodeproj">
+      location = "self:/Users/kumapo/works/ProtocolOrientedViewModel/ProtocolOrientedMVVM.xcodeproj">
    </FileRef>
 </Workspace>
