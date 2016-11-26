@@ -11,7 +11,6 @@ import UIKit
 import WebImage
 
 protocol ImageViewContainer {
-    
     var imageView: UIImageView? { get }
 }
 
@@ -25,6 +24,14 @@ extension ImageViewContainer {
     func reuseImageView() {
         if let imageView = imageView, imageView.sd_imageURL() != nil {
             imageView.sd_cancelCurrentImageLoad()
+        }
+    }
+}
+
+extension ImageViewContainer {
+    func fillImageView<Content: ImagePresentable>(with content: Content) {
+        if let imageView = imageView {
+            imageView.image = content.image
         }
     }
 }

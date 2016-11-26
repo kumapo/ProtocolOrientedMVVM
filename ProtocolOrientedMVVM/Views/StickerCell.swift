@@ -37,8 +37,5 @@ class StickerCell: UITableViewCell {
     }
 }
 
-extension StickerCell: ImageViewContainer {
-    typealias ImageContent = StickerCellViewModel
-}
-
+extension StickerCell: ImageViewContainer {}
 extension StickerCell: LabelContainer {}
