@@ -1,5 +1,5 @@
 //
-//  WebImagePresentable.swift
+//  ImagePresentable.swift
 //  ProtocolOrientedMVVM
 //
 //  Created by kumapo on 2016/11/23.
@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-protocol WebImagePresentable {
-    var imageURL: URL? { get }
-    var placeholderImage: UIImage { get }
+protocol ImagePresentable {
+    var image: UIImage { get }
 }
