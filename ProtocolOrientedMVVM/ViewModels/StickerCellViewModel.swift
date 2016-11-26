@@ -13,5 +13,5 @@ struct StickerCellViewModel: ViewModelType {
     var model: ModelType
 }
 
-extension StickerCellViewModel: WebImagePresentable {}
+extension StickerCellViewModel: ImageURLPresentable {}
 extension StickerCellViewModel: TextPresentable {}

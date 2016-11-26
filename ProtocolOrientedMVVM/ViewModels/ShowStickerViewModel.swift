@@ -10,7 +10,6 @@ import Foundation
 
 struct ShowStickerViewModel: ViewModelType {
     typealias ModelType = Sticker
-    
     var model: ModelType
 }
 
@@ -20,5 +19,5 @@ extension ShowStickerViewModel {
     }
 }
 
-extension ShowStickerViewModel: WebImagePresentable {}
+extension ShowStickerViewModel: ImageURLPresentable {}
 extension ShowStickerViewModel: TextPresentable {}

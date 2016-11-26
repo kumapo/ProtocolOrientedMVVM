@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ViewModelType where Self: WebImagePresentable, ModelType == Sticker {
+extension ViewModelType where Self: ImageURLPresentable, ModelType == Sticker {
     var imageURL: URL? {
         return URL(string: model.imageURLString)
     }
