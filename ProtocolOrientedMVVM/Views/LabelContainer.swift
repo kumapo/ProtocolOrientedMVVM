@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 
 protocol LabelContainer {
+    associatedtype TextContent = TextPresentable
     var textLabel: UILabel? { get }
 }
 
-extension LabelContainer {
-    func fillLabel(with content: TextPresentable) {
+extension LabelContainer where TextContent == TextPresentable {
+    func fillLabel(with content: TextContent) {
         if let textLabel = textLabel {
            textLabel.text = content.text
         }

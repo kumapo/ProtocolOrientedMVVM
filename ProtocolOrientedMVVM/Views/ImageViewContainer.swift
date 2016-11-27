@@ -11,11 +11,14 @@ import UIKit
 import WebImage
 
 protocol ImageViewContainer {
+    associatedtype ImageContent
+    
     var imageView: UIImageView? { get }
+    func fillImageView(with content: ImageContent)
 }
 
-extension ImageViewContainer {
-    func fillImageView<Content: ImageURLPresentable>(with content: Content) {
+extension ImageViewContainer where ImageContent == ImageURLPresentable {
+    func fillImageView(with content: ImageContent) {
         if let imageView = imageView {
             imageView.sd_setImage(with: content.imageURL, placeholderImage: content.placeholderImage)
         }
@@ -28,8 +31,8 @@ extension ImageViewContainer {
     }
 }
 
-extension ImageViewContainer {
-    func fillImageView<Content: ImagePresentable>(with content: Content) {
+extension ImageViewContainer where ImageContent == ImagePresentable {
+    func fillImageView(with content: ImageContent) {
         if let imageView = imageView {
             imageView.image = content.image
         }

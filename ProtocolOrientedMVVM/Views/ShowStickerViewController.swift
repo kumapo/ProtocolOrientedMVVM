@@ -35,5 +35,9 @@ class ShowStickerViewController: UIViewController {
     }
 }
 
-extension ShowStickerViewController: ImageViewContainer {}
-extension ShowStickerViewController: LabelContainer {}
+extension ShowStickerViewController: ImageViewContainer {
+    typealias ImageContent = ImageURLPresentable
+}
+extension ShowStickerViewController: LabelContainer {
+    typealias TextContent = TextPresentable
+}
