@@ -12,7 +12,7 @@ class BrowseStickersViewController: UITableViewController {
     let viewModel = BrowseStickersViewModel()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
     }
 
     // MARK: - Table view data source

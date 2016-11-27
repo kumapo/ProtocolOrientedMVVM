@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		541EF4DE1DE97F710066BCE7 /* ImageURLPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541EF4DD1DE97F710066BCE7 /* ImageURLPresentable.swift */; };
+		541EF4E21DEABA250066BCE7 /* ViewModelType+ImageURLPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541EF4E11DEABA250066BCE7 /* ViewModelType+ImageURLPresentable.swift */; };
 		547B47921DE7EB7200EBDEA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B477B1DE7EB7200EBDEA8 /* AppDelegate.swift */; };
 		547B47931DE7EB7200EBDEA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547B477C1DE7EB7200EBDEA8 /* Assets.xcassets */; };
 		547B47941DE7EB7200EBDEA8 /* imgBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = 547B477D1DE7EB7200EBDEA8 /* imgBlank.png */; };
@@ -25,12 +26,12 @@
 		547B47A11DE7EB7200EBDEA8 /* LabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B478F1DE7EB7200EBDEA8 /* LabelContainer.swift */; };
 		547B47A21DE7EB7200EBDEA8 /* ShowStickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B47901DE7EB7200EBDEA8 /* ShowStickerViewController.swift */; };
 		547B47A31DE7EB7200EBDEA8 /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B47911DE7EB7200EBDEA8 /* StickerCell.swift */; };
-		547B47A51DE7EC5900EBDEA8 /* ViewModelType+WebImagePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B47A41DE7EC5900EBDEA8 /* ViewModelType+WebImagePresentable.swift */; };
 		54FA30561DE5862B00D03D59 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FA30551DE5862B00D03D59 /* WebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		541EF4DD1DE97F710066BCE7 /* ImageURLPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageURLPresentable.swift; sourceTree = "<group>"; };
+		541EF4E11DEABA250066BCE7 /* ViewModelType+ImageURLPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewModelType+ImageURLPresentable.swift"; sourceTree = "<group>"; };
 		547B477B1DE7EB7200EBDEA8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		547B477C1DE7EB7200EBDEA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547B477D1DE7EB7200EBDEA8 /* imgBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgBlank.png; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		547B478F1DE7EB7200EBDEA8 /* LabelContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelContainer.swift; sourceTree = "<group>"; };
 		547B47901DE7EB7200EBDEA8 /* ShowStickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStickerViewController.swift; sourceTree = "<group>"; };
 		547B47911DE7EB7200EBDEA8 /* StickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
-		547B47A41DE7EC5900EBDEA8 /* ViewModelType+WebImagePresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewModelType+WebImagePresentable.swift"; sourceTree = "<group>"; };
 		54FA301F1DE56E4D00D03D59 /* ProtocolOrientedMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolOrientedMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FA30551DE5862B00D03D59 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,13 +92,13 @@
 			isa = PBXGroup;
 			children = (
 				547B47821DE7EB7200EBDEA8 /* BrowseStickersViewModel.swift */,
+				547B47871DE7EB7200EBDEA8 /* ImagePresentable.swift */,
+				541EF4DD1DE97F710066BCE7 /* ImageURLPresentable.swift */,
 				547B47831DE7EB7200EBDEA8 /* ShowStickerViewModel.swift */,
 				547B47841DE7EB7200EBDEA8 /* StickerCellViewModel.swift */,
 				547B47851DE7EB7200EBDEA8 /* TextPresentable.swift */,
 				547B47861DE7EB7200EBDEA8 /* ViewModelType.swift */,
-				547B47871DE7EB7200EBDEA8 /* ImagePresentable.swift */,
-				541EF4DD1DE97F710066BCE7 /* ImageURLPresentable.swift */,
-				547B47A41DE7EC5900EBDEA8 /* ViewModelType+WebImagePresentable.swift */,
+				541EF4E11DEABA250066BCE7 /* ViewModelType+ImageURLPresentable.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -106,11 +106,11 @@
 		547B47881DE7EB7200EBDEA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				547B47891DE7EB7200EBDEA8 /* LaunchScreen.storyboard */,
-				547B478B1DE7EB7200EBDEA8 /* Main.storyboard */,
 				547B478D1DE7EB7200EBDEA8 /* BrowseStickersViewController.swift */,
 				547B478E1DE7EB7200EBDEA8 /* ImageViewContainer.swift */,
 				547B478F1DE7EB7200EBDEA8 /* LabelContainer.swift */,
+				547B47891DE7EB7200EBDEA8 /* LaunchScreen.storyboard */,
+				547B478B1DE7EB7200EBDEA8 /* Main.storyboard */,
 				547B47901DE7EB7200EBDEA8 /* ShowStickerViewController.swift */,
 				547B47911DE7EB7200EBDEA8 /* StickerCell.swift */,
 			);
@@ -234,11 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				547B47921DE7EB7200EBDEA8 /* AppDelegate.swift in Sources */,
+				541EF4E21DEABA250066BCE7 /* ViewModelType+ImageURLPresentable.swift in Sources */,
 				547B47971DE7EB7200EBDEA8 /* BrowseStickersViewModel.swift in Sources */,
 				547B479C1DE7EB7200EBDEA8 /* ImagePresentable.swift in Sources */,
 				547B479A1DE7EB7200EBDEA8 /* TextPresentable.swift in Sources */,
 				547B47A01DE7EB7200EBDEA8 /* ImageViewContainer.swift in Sources */,
-				547B47A51DE7EC5900EBDEA8 /* ViewModelType+WebImagePresentable.swift in Sources */,
 				547B479F1DE7EB7200EBDEA8 /* BrowseStickersViewController.swift in Sources */,
 				547B47A31DE7EB7200EBDEA8 /* StickerCell.swift in Sources */,
 				547B47961DE7EB7200EBDEA8 /* Sticker.swift in Sources */,
